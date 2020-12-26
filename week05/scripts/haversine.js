@@ -52,7 +52,7 @@ elLocate.addEventListener("click", function () {
             elLong.innerHTML = "Your longitude : " + userLong;
             elDepluze.innerHTML = "Distance to De Pulze, CJ is " + distances[0];
             elSunway.innerHTML = "Distance to Sunway Pyramid is " + distances[1];
-            elKlcc.innerHTML = "Distance to KLCC is " + distance[2];
+            elKlcc.innerHTML = "Distance to KLCC is " + distances[2];
 
         });
     } else {
