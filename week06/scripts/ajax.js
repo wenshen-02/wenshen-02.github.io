@@ -6,7 +6,7 @@ function getRandomUser() {
             let data = JSON.parse(this.response);
             let elFirstName = document.getElementById("firstName");
             let elLastName = document.getElementById("lastName");
-            let elJsonResult = document.getElementById("jasonResult");
+            let elJsonResult = document.getElementById("jsonResult");
             let elUserImage = document.getElementById("userImage");
             let elPhone = document.getElementById("phone");
             let elAddress = document.getElementById("address");
