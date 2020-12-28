@@ -1,8 +1,8 @@
 function getRandomUser() {
     let xhttp = new XMLHttpRequest(); //create requeset obj
 
-    xhttp.onreadystatechange = function() {
-        if(this.readyState == 4 && this.status == 200){
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.response);
             let elFirstName = document.getElementById("firstName");
             let elLastName = document.getElementById("lastName");
@@ -17,7 +17,11 @@ function getRandomUser() {
             elUserImage.title = data.results[0].name.first + " " + data.results[0].name.last;
             elLastName.innerHTML = data.results[0].name.last;
             elPhone.innerHTML = data.results[0].phone;
-            elAddress.innerHTML = data.results[0].location.street.number + " " + data.results[0].location.street.name;
+            elAddress.innerHTML = data.results[0].location.street.number + " "
+                + data.results[0].location.street.name + ", <br> "
+                + data.results[0].location.city + " "
+                + data.results[0].location.posscode + ", <br> "
+                + data.results[0].location.country;
             elEmail.innerHTML = data.results[0].email;
 
             elJsonResult.innerHTML = this.response;
@@ -28,6 +32,6 @@ function getRandomUser() {
     xhttp.send();
 }
 let elGetRandomUser = document.getElementById("getRandomUserBtn");
-elGetRandomUser.addEventListener("click", function() {
+elGetRandomUser.addEventListener("click", function () {
     getRandomUser();
 });
