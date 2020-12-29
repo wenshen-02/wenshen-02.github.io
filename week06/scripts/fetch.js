@@ -23,7 +23,7 @@ function GetBookings() {
         });
 }
 
-let getBookingBtn = document.getElementById("getBooking");
+let getBookingBtn = document.getElementById("getBookings");
 getBookingBtn.addEventListener("click", function () {
     GetBookings();
 });
