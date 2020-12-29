@@ -29,7 +29,7 @@ let app4 = new Vue({
                 text: "Learn JavaScript"
             },
             {
-                test: "Learn Vue"
+                text: "Learn Vue"
             },
             {
                 text: "Build something awesome!"
