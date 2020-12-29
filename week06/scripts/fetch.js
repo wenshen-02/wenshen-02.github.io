@@ -5,6 +5,16 @@ function GetBookings() {
         .then(json => {
             //do something with the data
             console.log(json.GetBookings);
+            let bookingList = getElementById("bookingList");
+            bookingList.innerHTML = "";
+            for (let i = 0; i < json.bookings.length; i++) {
+                let gName = json.bookings[i].name;
+                let gEmail = json.bookings[i].email;
+                let gpax = json.bookings[i].pax;
+                let gId = json.bookings[i].id;
+
+                bookingList.innerHTML += gId + "-" + gName + ", " + gEmail + ", pax:" + gpax + "<br>";
+            }
         });
 }
 
