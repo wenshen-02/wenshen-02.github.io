@@ -24,8 +24,9 @@ function BookNow(guestName, guestEmail, guestpax) {
 window.addEventListener("load", function () {
     document.getElementById("bookNow").addEventListener("click", function () {
         let userName = document.getElementById("userName").value;
-        //finish it with userEmail, userPax,userRemarks
-
+        let userEmail = document.getElementById("userEmail").value;
+        let userPax = document.getElementById("userPax").value;
+        let userRemarks = document.getElementById("userRemarks").value;
         bookNow(userName, userEmail, userPax, userRemarks);
     });
 });
