@@ -8,7 +8,6 @@ function BookNow(guestName, guestEmail, guestPax, guestRemarks) {
             remarks: guestRemarks
         }
     }
-
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(body),
