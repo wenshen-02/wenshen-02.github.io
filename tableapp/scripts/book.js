@@ -8,6 +8,7 @@ function BookNow(guestName, guestEmail, guestpax) {
             remarks: guestRemarks
         }
     }
+
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(body),
@@ -27,6 +28,7 @@ window.addEventListener("load", function () {
         let userEmail = document.getElementById("userEmail").value;
         let userPax = document.getElementById("userPax").value;
         let userRemarks = document.getElementById("userRemarks").value;
+
         bookNow(userName, userEmail, userPax, userRemarks);
     });
 });
