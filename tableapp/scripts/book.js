@@ -1,5 +1,5 @@
 function BookNow(guestName, guestEmail, guestPax, guestRemarks) {
-    let url = 'https://api.sheety.co/5ade2c1e4ef66f465fad1ece18a7fb1e/bookingApp/bookings';
+    let url = 'https://api.sheety.co/5ade2c1e4ef66f465fad1ecae18a7fb1e/bookingApp/bookings';
     let body = {
         booking: {
             name: guestName,
@@ -8,6 +8,7 @@ function BookNow(guestName, guestEmail, guestPax, guestRemarks) {
             remarks: guestRemarks
         }
     }
+
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(body),
@@ -30,4 +31,4 @@ window.addEventListener("load", function () {
 
         BookNow(userName, userEmail, userPax, userRemarks);
     });
-});
+}); 
