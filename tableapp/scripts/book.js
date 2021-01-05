@@ -17,8 +17,7 @@ function BookNow(guestName, guestEmail, guestPax, guestRemarks) {
     })
         .then((response) => response.json())
         .then(json => {
-            alert(json.booking.name + " added!" +
-                "The crew will contact ypu shortly to confirm your booking!");
+            alert(json.booking.name + " added!" + "  The crew will contact you to confirm your booking shortly!");
         });
 }
 
